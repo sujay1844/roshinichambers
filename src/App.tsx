@@ -9,18 +9,13 @@ import Confetti from "react-confetti";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-200">
-      <div
-        className="flex h-screen items-center justify-center"
-        style={{
-          background: "url(/bg.jpg)",
-        }}
-      >
-        <span className="text-6xl font-hero uppercase text-black backdrop-blur-lg">
+    <div className="flex flex-col gap-2 bg-neutral-200">
+      <div className="flex h-screen items-center justify-center bg-[url(/bg.jpeg)] bg-cover bg-center bg-no-repeat">
+        <span className="w-full h-screen text-center content-center text-6xl font-hero uppercase text-neutral-200 backdrop-brightness-75 drop-shadow-2xl backdrop-blur-sm">
           Welcome to Roshini Chambers
         </span>
         <motion.p
-          className="absolute bottom-10 text-black text-9xl"
+          className="absolute bottom-10 text-white text-9xl"
           animate={{
             y: [0, -30, 0],
           }}
