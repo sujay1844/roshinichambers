@@ -1,5 +1,11 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import {
+  motion,
+  useTransform,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { useRef, useState } from "react";
+import Confetti from "react-confetti";
 
 const Example = () => {
   return (
@@ -7,7 +13,7 @@ const Example = () => {
       <div
         className="flex h-screen items-center justify-center"
         style={{
-          background: "url(/public/bg.jpg)",
+          background: "url(/bg.jpg)",
         }}
       >
         <span className="text-6xl font-black uppercase text-black backdrop-blur-lg">
@@ -25,14 +31,25 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+  const [confettiInView, setConfettiInView] = useState(false);
 
   const x = useTransform(scrollYProgress, [0, 0.9], ["1%", "-100%"]);
   const x2 = useTransform(scrollYProgress, [0, 0.9], ["-101%", "1%"]);
   const opacity = useTransform(scrollYProgress, [0.87, 1], ["0", "1"]);
 
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    setConfettiInView(progress >= 0.9 ? true : false);
+  });
   return (
     <section ref={targetRef} className="relative h-[5000vh] bg-neutral-200">
       <div className="sticky top-0 flex flex-col items-start gap-4 h-screen overflow-hidden">
+        {confettiInView && (
+          <Confetti
+            className="absolute top-0 left-0"
+            recycle={false}
+            numberOfPieces={400}
+          />
+        )}
         <div className="absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center">
           <motion.div
             style={{
@@ -98,52 +115,52 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/public/1.jpg",
+    url: "/1.jpg",
     title: "Title 1",
     id: 1,
   },
   {
-    url: "/public/2.jpg",
+    url: "/2.jpg",
     title: "Title 2",
     id: 2,
   },
   {
-    url: "/public/3.jpg",
+    url: "/3.jpg",
     title: "Title 3",
     id: 3,
   },
   {
-    url: "/public/4.jpg",
+    url: "/4.jpg",
     title: "Title 4",
     id: 4,
   },
   {
-    url: "/public/5.jpg",
+    url: "/5.jpg",
     title: "Title 5",
     id: 5,
   },
   {
-    url: "/public/6.jpg",
+    url: "/6.jpg",
     title: "Title 6",
     id: 6,
   },
   {
-    url: "/public/7.jpg",
+    url: "/7.jpg",
     title: "Title 7",
     id: 7,
   },
   {
-    url: "/public/8.jpg",
+    url: "/8.jpg",
     title: "Title 8",
     id: 8,
   },
   {
-    url: "/public/9.jpg",
+    url: "/9.jpg",
     title: "Title 9",
     id: 9,
   },
   {
-    url: "/public/10.jpg",
+    url: "/10.jpg",
     title: "Title 10",
     id: 10,
   },
