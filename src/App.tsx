@@ -83,6 +83,7 @@ const HorizontalScrollCarousel = () => {
               <p className="text-4xl">
                 &#127866; &#127863; &#127864; &#128166;
               </p>
+              <p>&lt;Give me emojis to insert here&gt;</p>
             </div>
             {confettiInView && (
               <div className="w-1/4 flex flex-col justify-center items-start gap-20">
@@ -176,98 +177,103 @@ type QuoteType = {
 const cards: CardType[] = [
   {
     url: "/1.jpg",
-    title: "Title 1",
+    title: "Suggest",
     id: 1,
   },
   {
     url: "/2.jpg",
-    title: "Title 2",
+    title: "me",
     id: 2,
   },
   {
     url: "/3.jpg",
-    title: "Title 3",
+    title: "words",
     id: 3,
   },
   {
     url: "/4.jpg",
-    title: "Title 4",
+    title: "words",
     id: 4,
   },
   {
     url: "/5.jpg",
-    title: "Title 5",
+    title: "that",
     id: 5,
   },
   {
     url: "/6.jpg",
-    title: "Title 6",
+    title: "describe",
     id: 6,
   },
   {
     url: "/7.jpg",
-    title: "Title 7",
+    title: "her",
     id: 7,
   },
   {
     url: "/8.jpg",
-    title: "Title 8",
+    title: "and",
     id: 8,
   },
   {
     url: "/9.jpg",
-    title: "Title 9",
+    title: "send",
     id: 9,
   },
   {
     url: "/10.jpg",
-    title: "Title 10",
+    title: "quirky",
     id: 10,
+  },
+  {
+    url: "/11.jpg",
+    title: "pics",
+    id: 11,
   },
 ];
 
 const quotesLeft: QuoteType[] = [
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
 ];
 
 const quotesRight: QuoteType[] = [
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
   {
-    content: "<Insert quote here>",
+    content: "<Give me a quote to insert here>",
     author: "Author",
   },
 ];
