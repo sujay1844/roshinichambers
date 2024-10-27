@@ -19,7 +19,18 @@ const Example = () => {
         <span className="text-6xl font-hero uppercase text-black backdrop-blur-lg">
           Welcome to Roshini Chambers
         </span>
-        <p className="absolute bottom-10 text-black">Scroll down</p>
+        <motion.p
+          className="absolute bottom-10 text-black text-9xl"
+          animate={{
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+          }}
+        >
+          &#8964;
+        </motion.p>
       </div>
       <HorizontalScrollCarousel />
     </div>
