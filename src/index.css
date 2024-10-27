@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Miniver&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --accent-color: #aaaaff;
+}
 
 .font-hero {
   font-family: "Nosifer";
@@ -18,8 +23,8 @@
   font-family: "Frijole";
 }
 
-:root {
-  --accent-color: #aaaaff;
+.font-quote {
+  font-family: "Miniver";
 }
 
 .wishes-border {

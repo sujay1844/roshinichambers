@@ -63,19 +63,40 @@ const HorizontalScrollCarousel = () => {
         )}
         <div className="absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center">
           <motion.div
+            className="w-full p-4 flex flex-row justify-center items-center gap-4"
             style={{
               opacity,
             }}
           >
-            <div className="w-[60rem] h-[30rem] bg-white rounded-[1rem] flex flex-col justify-center items-center">
-              <h1 className="text-5xl">Happy Birthday</h1>
-              <h1 className="text-4xl">Roshini</h1>
+            <div className="w-1/4 flex flex-col justify-center items-end gap-4">
+              {quotesLeft.map((quote, idx) => (
+                <Quote
+                  key={quote.content}
+                  content={quote.content}
+                  author={quote.author}
+                  idx={idx}
+                />
+              ))}
             </div>
             <div className="w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border">
               <h1 className="text-5xl font-wishes">Happy 21st Birthday</h1>
-              <h1 className="text-8xl font-name">roshini</h1>
+              <h1 className="text-8xl font-name lowercase">
+                &#127870;Roshini&#127870;
+              </h1>
+              <p className="text-4xl">
+                &#127866; &#127863; &#127864; &#128166;
+              </p>
             </div>
-            <div className=" w-1/4"> h</div>
+            <div className="w-1/4 flex flex-col justify-center items-start gap-4">
+              {quotesRight.map((quote, idx) => (
+                <Quote
+                  key={quote.content}
+                  content={quote.content}
+                  author={quote.author}
+                  idx={idx}
+                />
+              ))}
+            </div>
           </motion.div>
         </div>
         <motion.div style={{ x }} className="flex gap-4">
@@ -95,6 +116,16 @@ const HorizontalScrollCarousel = () => {
         </motion.div>
       </div>
     </section>
+  );
+};
+
+const Quote = ({ content, author, idx }: QuoteType & { idx: number }) => {
+  idx;
+  return (
+    <div className="p-4 w-full text-xl font-quote">
+      <p>{content}</p>
+      <p className="text-right">~&nbsp;{author}</p>
+    </div>
   );
 };
 
@@ -125,6 +156,11 @@ type CardType = {
   url: string;
   title: string;
   id: number;
+};
+
+type QuoteType = {
+  content: string;
+  author: string;
 };
 
 const cards: CardType[] = [
@@ -177,5 +213,75 @@ const cards: CardType[] = [
     url: "/10.jpg",
     title: "Title 10",
     id: 10,
+  },
+];
+
+const quotesLeft: QuoteType[] = [
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+];
+
+const quotesRight: QuoteType[] = [
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
+  },
+  {
+    content: "<Insert quote here>",
+    author: "Author",
   },
 ];
