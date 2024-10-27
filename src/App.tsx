@@ -3,12 +3,17 @@ import { useRef } from "react";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-800">
-      <div className="flex h-screen items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
+    <div className="bg-neutral-200">
+      <div
+        className="flex h-screen items-center justify-center"
+        style={{
+          background: "url(/public/bg.jpg)",
+        }}
+      >
+        <span className="text-6xl font-black uppercase text-black backdrop-blur-lg">
           Welcome to Roshini Chambers
         </span>
-        <p className="absolute bottom-10 text-white">Scroll down</p>
+        <p className="absolute bottom-10 text-black">Scroll down</p>
       </div>
       <HorizontalScrollCarousel />
     </div>
@@ -23,10 +28,10 @@ const HorizontalScrollCarousel = () => {
 
   const x = useTransform(scrollYProgress, [0, 0.9], ["1%", "-100%"]);
   const x2 = useTransform(scrollYProgress, [0, 0.9], ["-101%", "1%"]);
-  const opacity = useTransform(scrollYProgress, [0.7, 1], ["0", "1"]);
+  const opacity = useTransform(scrollYProgress, [0.87, 1], ["0", "1"]);
 
   return (
-    <section ref={targetRef} className="relative h-[600vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[5000vh] bg-neutral-200">
       <div className="sticky top-0 flex flex-col items-start gap-4 h-screen overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center">
           <motion.div
@@ -34,9 +39,10 @@ const HorizontalScrollCarousel = () => {
               opacity,
             }}
           >
-            <motion.div className="text-6xl text-blue-600 bg-red-500 w-full h-full">
-              Hello
-            </motion.div>
+            <div className="w-[60rem] h-[30rem] bg-white rounded-[1rem] flex flex-col justify-center items-center">
+              <h1 className="text-5xl">Happy Birthday</h1>
+              <h1 className="text-4xl">Roshini</h1>
+            </div>
           </motion.div>
         </div>
         <motion.div style={{ x }} className="flex gap-4">
@@ -63,7 +69,7 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[300px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[20rem] w-[30rem] overflow-hidden bg-neutral-900"
     >
       <div
         style={{
@@ -74,7 +80,7 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className="text-6xl font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
       </div>
@@ -92,38 +98,53 @@ type CardType = {
 
 const cards: CardType[] = [
   {
-    url: "/imgs/abstract/1.jpg",
+    url: "/public/1.jpg",
     title: "Title 1",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
+    url: "/public/2.jpg",
     title: "Title 2",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
+    url: "/public/3.jpg",
     title: "Title 3",
     id: 3,
   },
   {
-    url: "/imgs/abstract/4.jpg",
+    url: "/public/4.jpg",
     title: "Title 4",
     id: 4,
   },
   {
-    url: "/imgs/abstract/5.jpg",
+    url: "/public/5.jpg",
     title: "Title 5",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
+    url: "/public/6.jpg",
     title: "Title 6",
     id: 6,
   },
   {
-    url: "/imgs/abstract/7.jpg",
+    url: "/public/7.jpg",
     title: "Title 7",
     id: 7,
+  },
+  {
+    url: "/public/8.jpg",
+    title: "Title 8",
+    id: 8,
+  },
+  {
+    url: "/public/9.jpg",
+    title: "Title 9",
+    id: 9,
+  },
+  {
+    url: "/public/10.jpg",
+    title: "Title 10",
+    id: 10,
   },
 ];
