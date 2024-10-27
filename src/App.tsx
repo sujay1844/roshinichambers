@@ -48,7 +48,7 @@ const HorizontalScrollCarousel = () => {
   });
   return (
     <section ref={targetRef} className="relative h-[5000vh]">
-      <div className="sticky top-0 flex flex-col items-start gap-4 h-screen overflow-hidden">
+      <div className="sticky top-0 bg-pattern flex flex-col items-start gap-4 h-screen overflow-hidden">
         {confettiInView && (
           <Confetti
             className="absolute top-0 left-0"
