@@ -3,9 +3,8 @@ import {
   useTransform,
   useScroll,
   useMotionValueEvent,
-  useAnimation,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Confetti from "react-confetti";
 
 const Example = () => {
