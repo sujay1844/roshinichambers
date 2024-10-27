@@ -16,7 +16,7 @@ const Example = () => {
           background: "url(/bg.jpg)",
         }}
       >
-        <span className="text-6xl font-black uppercase text-black backdrop-blur-lg">
+        <span className="text-6xl font-hero uppercase text-black backdrop-blur-lg">
           Welcome to Roshini Chambers
         </span>
         <p className="absolute bottom-10 text-black">Scroll down</p>
@@ -41,7 +41,7 @@ const HorizontalScrollCarousel = () => {
     setConfettiInView(progress >= 0.9 ? true : false);
   });
   return (
-    <section ref={targetRef} className="relative h-[5000vh] bg-neutral-200">
+    <section ref={targetRef} className="relative h-[5000vh]">
       <div className="sticky top-0 flex flex-col items-start gap-4 h-screen overflow-hidden">
         {confettiInView && (
           <Confetti
@@ -60,6 +60,11 @@ const HorizontalScrollCarousel = () => {
               <h1 className="text-5xl">Happy Birthday</h1>
               <h1 className="text-4xl">Roshini</h1>
             </div>
+            <div className="w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border">
+              <h1 className="text-5xl font-wishes">Happy 21st Birthday</h1>
+              <h1 className="text-8xl font-name">roshini</h1>
+            </div>
+            <div className=" w-1/4"> h</div>
           </motion.div>
         </div>
         <motion.div style={{ x }} className="flex gap-4">
@@ -97,9 +102,7 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="text-6xl font-black uppercase text-white backdrop-blur-lg">
-          {card.title}
-        </p>
+        <p className="text-6xl font-black uppercase text-white">{card.title}</p>
       </div>
     </div>
   );
