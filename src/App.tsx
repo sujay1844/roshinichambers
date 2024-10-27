@@ -70,7 +70,7 @@ const HorizontalScrollCarousel = () => {
             }}
           >
             {confettiInView && (
-              <div className="w-1/4 flex flex-col justify-center items-end gap-4">
+              <div className="w-1/4 flex flex-col justify-center items-end gap-20">
                 {quotesLeft.map((quote, idx) => (
                   <Quote
                     key={quote.content}
@@ -91,7 +91,7 @@ const HorizontalScrollCarousel = () => {
               </p>
             </div>
             {confettiInView && (
-              <div className="w-1/4 flex flex-col justify-center items-start gap-4">
+              <div className="w-1/4 flex flex-col justify-center items-start gap-20">
                 {quotesRight.map((quote, idx) => (
                   <Quote
                     key={quote.content}
@@ -253,33 +253,9 @@ const quotesLeft: QuoteType[] = [
     content: "<Insert quote here>",
     author: "Author",
   },
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
 ];
 
 const quotesRight: QuoteType[] = [
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
-  {
-    content: "<Insert quote here>",
-    author: "Author",
-  },
   {
     content: "<Insert quote here>",
     author: "Author",
