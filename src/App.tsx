@@ -3,8 +3,9 @@ import {
   useTransform,
   useScroll,
   useMotionValueEvent,
+  useAnimation,
 } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Confetti from "react-confetti";
 
 const Example = () => {
@@ -68,16 +69,18 @@ const HorizontalScrollCarousel = () => {
               opacity,
             }}
           >
-            <div className="w-1/4 flex flex-col justify-center items-end gap-4">
-              {quotesLeft.map((quote, idx) => (
-                <Quote
-                  key={quote.content}
-                  content={quote.content}
-                  author={quote.author}
-                  idx={idx}
-                />
-              ))}
-            </div>
+            {confettiInView && (
+              <div className="w-1/4 flex flex-col justify-center items-end gap-4">
+                {quotesLeft.map((quote, idx) => (
+                  <Quote
+                    key={quote.content}
+                    content={quote.content}
+                    author={quote.author}
+                    idx={idx}
+                  />
+                ))}
+              </div>
+            )}
             <div className="w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border">
               <h1 className="text-5xl font-wishes">Happy 21st Birthday</h1>
               <h1 className="text-8xl font-name lowercase">
@@ -87,16 +90,18 @@ const HorizontalScrollCarousel = () => {
                 &#127866; &#127863; &#127864; &#128166;
               </p>
             </div>
-            <div className="w-1/4 flex flex-col justify-center items-start gap-4">
-              {quotesRight.map((quote, idx) => (
-                <Quote
-                  key={quote.content}
-                  content={quote.content}
-                  author={quote.author}
-                  idx={idx}
-                />
-              ))}
-            </div>
+            {confettiInView && (
+              <div className="w-1/4 flex flex-col justify-center items-start gap-4">
+                {quotesRight.map((quote, idx) => (
+                  <Quote
+                    key={quote.content}
+                    content={quote.content}
+                    author={quote.author}
+                    idx={idx}
+                  />
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
         <motion.div style={{ x }} className="flex gap-4">
@@ -120,12 +125,23 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Quote = ({ content, author, idx }: QuoteType & { idx: number }) => {
-  idx;
   return (
-    <div className="p-4 w-full text-xl font-quote">
+    <motion.div
+      className="p-4 w-full text-xl font-quote"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{
+        duration: 0.5,
+        delay: idx * 0.2 + 0.5,
+      }}
+    >
       <p>{content}</p>
       <p className="text-right">~&nbsp;{author}</p>
-    </div>
+    </motion.div>
   );
 };
 
