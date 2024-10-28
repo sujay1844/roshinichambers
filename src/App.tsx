@@ -179,65 +179,65 @@ type QuoteType = {
 const cards: CardType[] = [
   {
     url: "/1.webp",
-    title: "Suggest",
+    title: "mayo",
     id: 1,
   },
   {
     url: "/2.jpeg",
-    title: "me",
+    title: "niggi",
     id: 2,
   },
   {
     url: "/3.webp",
-    title: "words",
+    title: "monkey",
     id: 3,
   },
   {
     url: "/4.jpeg",
-    title: "words",
+    title: "they/them",
     id: 4,
   },
   {
     url: "/5.jpeg",
-    title: "that",
+    title: "5",
     id: 5,
   },
   {
     url: "/6.webp",
-    title: "describe",
+    title: "6",
     id: 6,
   },
   {
     url: "/7.webp",
-    title: "her",
+    title: "7",
     id: 7,
   },
   {
     url: "/8.jpg",
-    title: "and",
+    title: "8",
     id: 8,
   },
   {
     url: "/9.jpg",
-    title: "send",
+    title: "9",
     id: 9,
   },
   {
     url: "/10.jpg",
-    title: "quirky",
+    title: "grasshopper",
     id: 10,
   },
   {
     url: "/11.jpg",
-    title: "pics",
+    title: "11",
     id: 11,
   },
 ];
 
 const quotesLeft: QuoteType[] = [
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "She likes big black women",
+    author: "Dakshath",
   },
   {
     content: "<Give me a quote to insert here>",
@@ -271,8 +271,8 @@ const quotesRight: QuoteType[] = [
     author: "Author",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Weeb who worships big boobs",
+    author: "Yash nigga bar",
   },
   {
     content: "<Give me a quote to insert here>",
