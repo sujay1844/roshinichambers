@@ -155,7 +155,9 @@ const Card = ({ card }: { card: CardType }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="text-6xl font-black uppercase text-white">{card.title}</p>
+        <p className="text-6xl font-black uppercase text-white drop-shadow-xl">
+          {card.title}
+        </p>
       </div>
     </div>
   );
@@ -176,37 +178,37 @@ type QuoteType = {
 
 const cards: CardType[] = [
   {
-    url: "/1.jpg",
+    url: "/1.webp",
     title: "Suggest",
     id: 1,
   },
   {
-    url: "/2.jpg",
+    url: "/2.jpeg",
     title: "me",
     id: 2,
   },
   {
-    url: "/3.jpg",
+    url: "/3.webp",
     title: "words",
     id: 3,
   },
   {
-    url: "/4.jpg",
+    url: "/4.jpeg",
     title: "words",
     id: 4,
   },
   {
-    url: "/5.jpg",
+    url: "/5.jpeg",
     title: "that",
     id: 5,
   },
   {
-    url: "/6.jpg",
+    url: "/6.webp",
     title: "describe",
     id: 6,
   },
   {
-    url: "/7.jpg",
+    url: "/7.webp",
     title: "her",
     id: 7,
   },
