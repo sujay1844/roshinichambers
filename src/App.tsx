@@ -205,6 +205,33 @@ const BirthdayWishes = ({
           </div>
         )}
       </motion.div>
+      {confettiInView && (
+        <div className="absolute bottom-4 flex flex-col items-center gap-2">
+          <a
+            href="https://github.com/sujaykumarsuman/roshini-chambers"
+            className="text-blue-500 hover:underline flex items-center gap-1"
+          >
+            <span>GitHub</span>
+            <svg
+              className="size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+      <p className="text-xs text-gray-600">
+        &copy; 2024 Sujay R. All rights reserved
+      </p>
+        </div>
+      )}
     </div>
   );
 };
