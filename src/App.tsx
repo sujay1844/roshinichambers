@@ -83,7 +83,7 @@ const HorizontalScrollCarousel = () => {
               <p className="text-4xl">
                 &#127866; &#127863; &#127864; &#128166;
               </p>
-              <p>&lt;Give me emojis to insert here&gt;</p>
+              <p>&copy; 2024 Sujay R. All rights reserved</p>
             </div>
             {confettiInView && (
               <div className="w-1/4 flex flex-col justify-center items-start gap-20">
@@ -199,27 +199,27 @@ const cards: CardType[] = [
   },
   {
     url: "/5.jpeg",
-    title: "5",
+    title: "quirky",
     id: 5,
   },
   {
     url: "/6.webp",
-    title: "6",
+    title: "weeb",
     id: 6,
   },
   {
     url: "/7.webp",
-    title: "7",
+    title: "gay",
     id: 7,
   },
   {
     url: "/8.jpeg",
-    title: "8",
+    title: "3rd wheel",
     id: 8,
   },
   {
     url: "/9.png",
-    title: "9",
+    title: "nagarbhavi",
     id: 9,
   },
   {
@@ -229,7 +229,7 @@ const cards: CardType[] = [
   },
   {
     url: "/11.png",
-    title: "11",
+    title: "roshini",
     id: 11,
   },
 ];
@@ -252,15 +252,15 @@ const quotesLeft: QuoteType[] = [
     author: "Varshini",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Still considering starbucks date <3",
+    author: "Kinera",
   },
 ];
 
 const quotesRight: QuoteType[] = [
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Get a better helmet",
+    author: "Shreya MP",
   },
   {
     content: "<Give me a quote to insert here>",
