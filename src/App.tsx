@@ -21,17 +21,14 @@ const Example = () => {
     checkScreenSize();
 
     // Add event listener for resize
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
     // Cleanup
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   useEffect(() => {
-    const imageUrls = [
-      '/bg.jpeg',
-      ...cards.map(card => card.url)
-    ];
+    const imageUrls = ["/bg.jpeg", ...cards.map((card) => card.url)];
 
     const preloadImage = (url: string) => {
       return new Promise((resolve, reject) => {
@@ -48,7 +45,7 @@ const Example = () => {
         await document.fonts.ready;
         setIsLoading(false);
       } catch (error) {
-        console.error('Error loading assets:', error);
+        console.error("Error loading assets:", error);
         setIsLoading(false);
       }
     };
@@ -70,7 +67,7 @@ const Example = () => {
   if (isLoading) {
     return (
       <div className="h-screen w-screen flex items-center justify-center bg-neutral-900">
-        <motion.div 
+        <motion.div
           className="text-white text-2xl"
           animate={{
             opacity: [0.5, 1, 0.5],
@@ -155,10 +152,10 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const BirthdayWishes = ({ 
-  confettiInView, 
-  opacity 
-}: { 
+const BirthdayWishes = ({
+  confettiInView,
+  opacity,
+}: {
   confettiInView: boolean;
   opacity: MotionValue;
 }) => {
@@ -181,7 +178,9 @@ const BirthdayWishes = ({
           </div>
         )}
         <div className="w-full md:w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border px-4">
-          <h1 className="text-3xl md:text-5xl font-wishes text-center">Happy 21st Birthday</h1>
+          <h1 className="text-3xl md:text-5xl font-wishes text-center">
+            Happy 21st Birthday
+          </h1>
           <h1 className="text-5xl md:text-7xl font-name lowercase text-center whitespace-nowrap">
             <span className="text-7xl">&#127870;</span>
             <span className="text-7xl">roshini</span>
@@ -190,7 +189,6 @@ const BirthdayWishes = ({
           <p className="text-2xl md:text-4xl">
             &#127866; &#127863; &#127864; &#128166; &#9749;
           </p>
-          <p className="text-sm md:text-base">&copy; 2024 Sujay R. All rights reserved</p>
         </div>
         {confettiInView && (
           <div className="w-full md:w-1/4 flex flex-col justify-center items-center md:items-start gap-10 md:gap-20">
