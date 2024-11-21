@@ -4,10 +4,60 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Confetti from "react-confetti";
 
 const Example = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const imageUrls = [
+      '/bg.jpeg',
+      ...cards.map(card => card.url)
+    ];
+
+    const preloadImage = (url: string) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    };
+
+    const preloadAssets = async () => {
+      try {
+        await Promise.all(imageUrls.map(preloadImage));
+        await document.fonts.ready;
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error loading assets:', error);
+        setIsLoading(false);
+      }
+    };
+
+    preloadAssets();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-neutral-900">
+        <motion.div 
+          className="text-white text-2xl"
+          animate={{
+            opacity: [0.5, 1, 0.5],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+          }}
+        >
+          Loading...
+        </motion.div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-2 bg-neutral-200">
       <div className="flex h-screen items-center justify-center bg-[url(/bg.jpeg)] bg-cover bg-center bg-no-repeat">
