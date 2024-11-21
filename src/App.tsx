@@ -213,12 +213,12 @@ const cards: CardType[] = [
     id: 7,
   },
   {
-    url: "/8.jpg",
+    url: "/8.jpeg",
     title: "8",
     id: 8,
   },
   {
-    url: "/9.jpg",
+    url: "/9.png",
     title: "9",
     id: 9,
   },
@@ -228,7 +228,7 @@ const cards: CardType[] = [
     id: 10,
   },
   {
-    url: "/11.jpg",
+    url: "/11.png",
     title: "11",
     id: 11,
   },
@@ -240,16 +240,16 @@ const quotesLeft: QuoteType[] = [
     author: "Dakshath",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "She is badly into threesome",
+    author: "Geethz",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Our insta feeds are fucked",
+    author: "Vanshika",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Full time 3rd wheeler",
+    author: "Varshini",
   },
   {
     content: "<Give me a quote to insert here>",
