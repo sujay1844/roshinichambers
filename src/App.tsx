@@ -206,7 +206,8 @@ const BirthdayWishes = ({
       {confettiInView && (
         <div className="absolute bottom-4 flex flex-col items-center gap-2">
           <a
-            href="https://github.com/sujaykumarsuman/roshini-chambers"
+            href="https://github.com/sujay1844/roshinichambers"
+            target="_blank"
             className="text-blue-500 hover:underline flex items-center gap-1"
           >
             <span>GitHub</span>
