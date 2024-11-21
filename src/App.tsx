@@ -81,7 +81,7 @@ const HorizontalScrollCarousel = () => {
                 &#127870;Roshini&#127870;
               </h1>
               <p className="text-4xl">
-                &#127866; &#127863; &#127864; &#128166;
+                &#127866; &#127863; &#127864; &#128166; &#9749;
               </p>
               <p>&copy; 2024 Sujay R. All rights reserved</p>
             </div>
@@ -267,8 +267,9 @@ const quotesRight: QuoteType[] = [
     author: "Bhanuprabhas",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content:
+      "I will buy you a girl with your requirements (as described by yash)",
+    author: "Torke",
   },
   {
     content: "Weeb who worships big boobs",
