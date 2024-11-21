@@ -276,7 +276,7 @@ const quotesRight: QuoteType[] = [
     author: "Yash nigga bar",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Get another girl, leave mine alone",
+    author: "Sujay",
   },
 ];
