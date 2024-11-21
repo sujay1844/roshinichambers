@@ -89,8 +89,16 @@ const Example = () => {
         <span className="w-full h-screen text-center content-center text-6xl font-hero uppercase text-neutral-200 backdrop-brightness-75 drop-shadow-2xl backdrop-blur-sm">
           Welcome to Roshini Chambers
         </span>
-        <motion.p
-          className="absolute bottom-10 text-white text-9xl"
+        <motion.svg
+          className="absolute bottom-10"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           animate={{
             y: [0, -30, 0],
           }}
@@ -99,8 +107,8 @@ const Example = () => {
             repeat: Infinity,
           }}
         >
-          &#8964;
-        </motion.p>
+          <path d="M6 9l6 6 6-6" />
+        </motion.svg>
       </div>
       <HorizontalScrollCarousel />
     </div>
