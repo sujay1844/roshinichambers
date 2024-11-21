@@ -14,7 +14,7 @@ const Example = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsScreenTooSmall(window.innerWidth < 1200 || window.innerHeight < 800);
+      setIsScreenTooSmall(window.innerWidth < 1200 || window.innerHeight < 900);
     };
 
     // Check initially
@@ -58,7 +58,7 @@ const Example = () => {
       <div className="h-screen w-screen flex items-center justify-center bg-neutral-900 p-4">
         <div className="text-white text-center">
           <h2 className="text-2xl mb-2">Screen Too Small</h2>
-          <p>Please use a device with minimum screen size of 1200x800 pixels</p>
+          <p>Please use a device with minimum screen size of 1200x900 pixels</p>
         </div>
       </div>
     );
