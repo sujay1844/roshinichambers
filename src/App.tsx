@@ -3,6 +3,7 @@ import {
   useTransform,
   useScroll,
   useMotionValueEvent,
+  MotionValue,
 } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Confetti from "react-confetti";
@@ -106,49 +107,7 @@ const HorizontalScrollCarousel = () => {
             numberOfPieces={400}
           />
         )}
-        <div className="absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center">
-          <motion.div
-            className="w-full p-4 flex flex-row justify-center items-center gap-4"
-            style={{
-              opacity,
-            }}
-          >
-            {confettiInView && (
-              <div className="w-1/4 flex flex-col justify-center items-end gap-20">
-                {quotesLeft.map((quote, idx) => (
-                  <Quote
-                    key={quote.content}
-                    content={quote.content}
-                    author={quote.author}
-                    idx={idx}
-                  />
-                ))}
-              </div>
-            )}
-            <div className="w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border">
-              <h1 className="text-5xl font-wishes">Happy 21st Birthday</h1>
-              <h1 className="text-8xl font-name lowercase">
-                &#127870;Roshini&#127870;
-              </h1>
-              <p className="text-4xl">
-                &#127866; &#127863; &#127864; &#128166; &#9749;
-              </p>
-              <p>&copy; 2024 Sujay R. All rights reserved</p>
-            </div>
-            {confettiInView && (
-              <div className="w-1/4 flex flex-col justify-center items-start gap-20">
-                {quotesRight.map((quote, idx) => (
-                  <Quote
-                    key={quote.content}
-                    content={quote.content}
-                    author={quote.author}
-                    idx={idx}
-                  />
-                ))}
-              </div>
-            )}
-          </motion.div>
-        </div>
+        <BirthdayWishes confettiInView={confettiInView} opacity={opacity} />
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -166,6 +125,60 @@ const HorizontalScrollCarousel = () => {
         </motion.div>
       </div>
     </section>
+  );
+};
+
+const BirthdayWishes = ({ 
+  confettiInView, 
+  opacity 
+}: { 
+  confettiInView: boolean;
+  opacity: MotionValue;
+}) => {
+  return (
+    <div className="absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center">
+      <motion.div
+        className="w-full p-4 flex flex-col md:flex-row justify-center items-center gap-4"
+        style={{ opacity }}
+      >
+        {confettiInView && (
+          <div className="w-full md:w-1/4 flex flex-col justify-center items-center md:items-end gap-10 md:gap-20">
+            {quotesLeft.map((quote, idx) => (
+              <Quote
+                key={quote.content}
+                content={quote.content}
+                author={quote.author}
+                idx={idx}
+              />
+            ))}
+          </div>
+        )}
+        <div className="w-full md:w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border px-4">
+          <h1 className="text-3xl md:text-5xl font-wishes text-center">Happy 21st Birthday</h1>
+          <h1 className="text-5xl md:text-7xl font-name lowercase text-center whitespace-nowrap">
+            <span className="text-3xl md:text-5xl">&#127870;</span>
+            <span className="text-3xl md:text-5xl">roshini</span>
+            <span className="text-3xl md:text-5xl">&#127870;</span>
+          </h1>
+          <p className="text-2xl md:text-4xl">
+            &#127866; &#127863; &#127864; &#128166; &#9749;
+          </p>
+          <p className="text-sm md:text-base">&copy; 2024 Sujay R. All rights reserved</p>
+        </div>
+        {confettiInView && (
+          <div className="w-full md:w-1/4 flex flex-col justify-center items-center md:items-start gap-10 md:gap-20">
+            {quotesRight.map((quote, idx) => (
+              <Quote
+                key={quote.content}
+                content={quote.content}
+                author={quote.author}
+                idx={idx}
+              />
+            ))}
+          </div>
+        )}
+      </motion.div>
+    </div>
   );
 };
 
