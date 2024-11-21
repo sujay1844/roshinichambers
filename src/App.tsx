@@ -10,6 +10,22 @@ import Confetti from "react-confetti";
 
 const Example = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isScreenTooSmall, setIsScreenTooSmall] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsScreenTooSmall(window.innerWidth < 1200 || window.innerHeight < 800);
+    };
+
+    // Check initially
+    checkScreenSize();
+
+    // Add event listener for resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const imageUrls = [
@@ -39,6 +55,17 @@ const Example = () => {
 
     preloadAssets();
   }, []);
+
+  if (isScreenTooSmall) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-neutral-900 p-4">
+        <div className="text-white text-center">
+          <h2 className="text-2xl mb-2">Screen Too Small</h2>
+          <p>Please use a device with minimum screen size of 1200x800 pixels</p>
+        </div>
+      </div>
+    );
+  }
 
   if (isLoading) {
     return (
