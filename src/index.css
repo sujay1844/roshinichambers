@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Miniver&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -24,7 +24,8 @@
 }
 
 .font-quote {
-  font-family: "Miniver";
+  font-family: "Caveat";
+  font-size: 2rem;
 }
 
 .wishes-border {
