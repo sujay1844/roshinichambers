@@ -263,8 +263,8 @@ const quotesRight: QuoteType[] = [
     author: "Shreya MP",
   },
   {
-    content: "<Give me a quote to insert here>",
-    author: "Author",
+    content: "Buy me cold coffee",
+    author: "Bhanuprabhas",
   },
   {
     content: "<Give me a quote to insert here>",
