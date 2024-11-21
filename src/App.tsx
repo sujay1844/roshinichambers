@@ -183,9 +183,9 @@ const BirthdayWishes = ({
         <div className="w-full md:w-1/2 h-[30rem] bg-white flex flex-col justify-center items-center wishes-border px-4">
           <h1 className="text-3xl md:text-5xl font-wishes text-center">Happy 21st Birthday</h1>
           <h1 className="text-5xl md:text-7xl font-name lowercase text-center whitespace-nowrap">
-            <span className="text-3xl md:text-5xl">&#127870;</span>
-            <span className="text-3xl md:text-5xl">roshini</span>
-            <span className="text-3xl md:text-5xl">&#127870;</span>
+            <span className="text-7xl">&#127870;</span>
+            <span className="text-7xl">roshini</span>
+            <span className="text-7xl">&#127870;</span>
           </h1>
           <p className="text-2xl md:text-4xl">
             &#127866; &#127863; &#127864; &#128166; &#9749;
